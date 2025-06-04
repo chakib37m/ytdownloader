@@ -1,0 +1,145 @@
+:root {
+  --primary: #0A0213;
+  --highlight: #271a4e;
+  --secondary: #dab8b8;
+  font-size: large;
+}
+.light {
+  --primary: #c8fff8;
+  --highlight: #97d0ff;
+  --secondary: #000000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--primary);
+  background-size: cover;
+  color: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  top: 1rem;
+  background: var(--primary);
+  color: var(--secondary);
+  border-color: var(--highlight);
+  border-radius: 50%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  border-color: var(--highlight);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+.themebtn {
+  background: var(--secondary);
+  color: var(--primary);
+  border: 1 rem solid var(--secondary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.urlform {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 4rem;
+  font-size: larger;
+  color: var(--secondary);
+  border : 80px;
+  border-color: var(--highlight);
+  border-radius: 40%;
+}
+.link-container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #97d0ff;
+}
+.urlinput {
+  flex: 1;
+  border: none;
+  width: 80%;
+  transition: background-color 0.3s ease;
+  background: var(--highlight);
+  font-size: larger;
+  outline: none;
+}
+.downloadbtn {
+  background: var(--highlight);
+  color: var(--secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: larger;
+  outline: none;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.extensions {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.extension {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.quality {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pick {
+  background: var(--primary);
+  color: var(--secondary);
+  border: 1 rem solid var(--secondary);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.pick:hover, .pick.selected {
+  background: var(--highlight);
+  border-radius: 50%;
+  border-color: var(--highlight);
+}
