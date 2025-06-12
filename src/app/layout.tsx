@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css"; 
-import React from 'react';
+import "./globals.css";
+import React from "react";
+import Image from "next/image"
 import ThemeToggle from "./components/theme";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,6 @@ export const metadata: Metadata = {
   description: "Download Youtube videos with ease",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,22 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className="header">
           <div className="logo">
-            <img src="/logo.png" alt="Logo" />
-            </div>
-            <div className="title">
-              Youtube Downloader
-            </div>
-              <ThemeToggle />
-            </div>
+            <Image className="logopic" src="next.svg" alt="Logo" width={200} height={40} />
+          </div>
+          <ThemeToggle />
+        </div>
         {children}
-        <footer className="footer">
-          Download Youtube videos with ease
-        </footer>
       </body>
     </html>
   );
